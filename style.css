@@ -1,0 +1,625 @@
+*{
+    margin:0%;
+    padding: 0%;
+    font-family: 'Poppins', sans-serif;
+   
+}
+.header{
+   min-height: 100vh;
+   width: 100%;
+   background: linear-gradient(rgba(4,9,30,.7),rgba(4,9,30,.7)),url(/eduford_img/banner.png);
+   
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center;
+   
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1rem;
+    flex-wrap: wrap;
+    /* position: fixed; */
+}
+.header-logo{
+   font-size: 1rem;
+}
+.links-list{
+    padding: 2rem;
+}
+.link-items{
+   display: flex;
+   flex-direction: row;
+   list-style-type: none;
+}
+.links-list li{
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    color: white;
+}
+.links-list li a{
+    color: white;
+    text-decoration: none;
+}
+.links-list li::after{
+    content:"";
+    width: 0%;
+    height: .2rem;
+    background: tomato;
+    display: block;
+    transition: .5s;
+}
+.links-list li:hover::after{
+    width: 100%; 
+}
+.link-items-heading{
+    display: none;
+}
+.menu-button{
+    display: none;
+}
+.link-items-close{
+    border: 3px solid white;
+    background: transparent;
+    color: white;
+    border-radius: 4px;
+    display: inline-block;
+    padding-left: .3rem;
+    padding-right: .3rem;
+    width:40%;
+    margin-bottom: 1rem;
+    display: none;
+}
+.main-header-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 90%;
+}
+.main-header-text h1{
+    color:white;
+    font-size: 2.5rem;
+    font-style: italic;
+}
+.main-header-text p{
+    color:white;
+    font-style: italic;
+}
+.main-header-text a{
+    display:inline-block;
+    text-decoration: none;
+    color: white;
+    padding: .5rem 2.6rem;
+    margin: 1rem;
+    border: 1px solid white;
+    position: relative;
+    transition: 1s;
+}
+.main-header-text a:hover{
+   background: tomato;
+   border: 1px solid tomato;
+}
+/* ******************Media Queries**************************** */
+@media(max-width:760px){
+    .link-items{
+        flex-direction: column;
+    }
+    .links-list{
+        height:100vh ;
+        width: 350px;
+        position: absolute;
+        left: 100%;
+        background-color: tomato;
+        border-radius: 7px;
+        z-index: 1;
+        display: none;
+        transition: 1s;
+
+
+    }
+    .links-list li{
+        padding-top: 2rem;
+    }
+    .link-items-heading{
+        display: inline-block;
+        color:white;
+    }
+    .links-list li::after{
+        background: white;
+
+    }
+    .menu-button{
+        display: inline-block;
+        height: 30px;
+        width: 60px;
+        margin-top: 1rem;
+        margin-bottom:0.5rem ;
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 3px;
+        color: white;
+        transition: 1s;
+        
+    }
+    .menu-button:hover{
+        background: tomato;
+    }
+    .link-items-close{
+        display: initial;
+    }
+}
+/* ************************************Section Course**********************  */
+.course{
+    text-align: center;
+    margin: auto;
+    padding: 5%;
+    width: 80%;
+    padding-top: 7rem;
+    margin-bottom: 3rem;
+}
+.course h1{
+    font-weight: 900;
+    font-size: 2rem;
+}
+.course p{
+    padding: 1%;
+    font-weight: 500;
+    
+}
+.course-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.course-column{
+    width: 31%;
+    padding: 1rem;
+    margin: auto;
+    background: #fff3f3;
+    margin: 1.3rem;
+    transition: 1s;
+
+  
+}
+.course-column:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+}
+.course-column h3{
+    padding: .5rem 0rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
+.course-column p{
+    padding: .5rem 0rem;
+    text-align: center;
+}
+/* ****************************Media Queries*********************** */
+@media(max-width:760px) {
+    .course-row{
+        flex-direction: column;
+    }
+    .course-column{
+        width: 80%;
+    }
+}
+@media(max-width:1100px) and (min-width:761px) {
+    .course-row{
+        flex-direction: column;
+       
+    }
+    .course-column{
+        width: 80%;
+        margin-left: 4rem;
+       
+    }
+}
+
+/* ******************************Campus************************************** */
+
+.campus{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 3rem;
+}
+.campus h1{
+    font-weight: 900;
+    font-size: 2rem;  
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+    margin-top: 4rem;
+}
+.campus-col{
+  flex-basis: 32%;
+  margin-bottom: 4rem;
+  border-radius: .6rem;
+  position: relative;
+  overflow: hidden;
+}
+.campus-col img{
+  width: 100%;
+  display: block;
+}
+.campus-col .layer{
+  background: transparent ;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top:0%;
+  transition: .5s;
+}
+.campus-col .layer h3{
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 500;
+    top: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    background: transparent;
+    transition: .5s;
+}
+.campus-col .layer:hover {
+    background: rgba(233, 0, 0, .2);
+}
+.layer:hover h3{
+   top: 50%;
+    opacity: 1;
+}
+/* *****************************Medai Qieries***************************** */
+@media(max-width:760px) {
+    .row{
+        flex-direction: column;
+    }
+    
+}
+/* ***************************************Facilities**************************** */
+.facilities{
+    text-align: center;
+    width: 95%;
+    padding-top: 4rem;
+    margin: auto;
+    
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+    margin-top: 4rem;
+}
+.facilities h1{
+    font-weight: 900;
+    font-size: 2rem;  
+}
+.facilities-column{
+    flex-basis: 31%;
+    margin: 1.3rem;
+    border-radius: 1rem;
+    text-align:left;
+    margin-bottom: 2.5rem;
+    /* padding-right: rem; */
+} 
+.facilities-column img{
+    width: 100%;
+    border-radius: .3rem;
+}
+.facilities-column h3{
+    font-size: 1.3rem;
+}
+.facilities-column p{
+    color: rgb(66, 65, 65);
+    word-spacing: .3rem;
+    line-height: 1.3rem;
+}
+
+/* *********************************Testimonal*************************** */
+.testimonal{
+    text-align: center;
+    width: 80%;
+    padding-top: 4rem;
+    margin: auto;
+}
+.testimonal-col{
+    flex-basis: 48%;
+    background-color: #fff3f3;
+    margin: 1rem;
+    display: flex;
+    padding: 1rem;
+    text-align: left;
+    border-radius: 1.3rem;
+    flex-basis: 90%;
+  
+}
+.testimonal-col img{
+   height: 46px;
+   width: 45px;
+   border-radius: 50%;
+   margin-left: 2rem;
+   margin-right: 1rem;
+}
+.testimonal-col h3{
+ margin-left: 4rem;
+ padding: .3rem;
+}
+.testimonal-col p{
+    color: rgb(66, 65, 65);
+    word-spacing: .3rem;
+    line-height: 1.3rem;
+    text-justify:distribute-all-lines;
+}
+
+    
+
+
+/* <!-- ----------------------Call To Action-------------- --> */
+.cta{
+    margin: 3rem auto;
+    width: 80%;
+    background: linear-gradient(rgba(4,9,30,.7),rgba(4,9,30,.7)),url(./eduford_img/about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-radius: 10px;
+   padding: 4rem;
+}
+.cta a{
+    display:inline-block;
+    text-decoration: none;
+    color: white;
+    padding: .5rem 2.6rem;
+    margin: 1rem;
+    border: 1px solid white;
+    position: relative;
+    transition: 1s;
+}
+.cta a:hover{
+   background: tomato;
+   border: 1px solid tomato;
+}
+.cta h1{
+     font-weight: 600;
+    color: #fff3f3;
+    margin: 1rem;
+}
+@media(max-width:760px) {
+    .cta{
+        width: 60%;
+    }
+    
+}
+/* ---------------------------footer----------------------- */
+.footer {
+width: 60%;
+margin: 2rem auto 2rem auto;
+text-align: center; 
+padding-top: 2rem;
+}
+.footer .fab{
+    padding: .4rem;
+}
+.footer .fa-facebook:hover{
+    color: blue;
+    
+   
+    transition: 1s;
+   
+}
+.footer .fa-instagrm:hover{
+    color:orangered;
+}
+.footer .fa-twitter:hover{
+    color: blue;
+}
+.footer .lastLine{
+    font-style: italic;
+    font-weight: 600;
+    padding-top: .5rem;
+}
+/* -------------------ABOUT PAGE---------------- */
+
+.sub-header{
+    background:linear-gradient(rgba(4,9,30,.7),rgba(4,9,30,.7)),url(/eduford_img/background.jpg); 
+    width: 100%;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color:white;
+}
+.sub-header h1{
+    font-size: 2.5rem;
+    padding-top: 1.2rem;
+}
+
+ .about-us{
+    width: 80%;
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 50px;
+
+  border-radius: 6px;
+}
+.about-col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.about-col img{
+    width: 100%;
+}
+.about-us a{
+    display:inline-block;
+    text-decoration: none;
+    color:tomato;
+    padding: .5rem 2.6rem;
+    margin: 1rem;
+    border: 1px solid tomato;
+    position: relative;
+    transition: 1s;
+}
+.about-us a:hover{
+   background: tomato;
+   border: 1px solid tomato;
+   color: white;
+}
+/* -----------------------Blog Page Content-----------------  */
+.BlogSection{
+    width: 90%;
+    margin: auto;
+    margin-top: 5rem;
+ 
+}
+.BlogSection .row-left{
+    flex-basis: 65%;
+}
+.BlogSection .row-left img{
+    width: 100%;
+}
+.BlogSection .row-left h2{
+    padding-top: 1rem;
+}
+.BlogSection .row-left p{
+    line-height: 16px;
+    color: #555;
+    padding-top: 1.4rem;
+}
+
+.row-right{
+    padding: 0px 20px;
+    flex-basis: 35%;
+    color: #555;
+    padding-left: 2rem;
+    padding-right: 2rem;
+   
+}
+.row-right div{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 8px 0px;
+}
+.row-right h4{
+    text-align: center;
+    background-color: tomato;
+    border-radius: 1px;
+    margin-bottom :1rem;
+    padding: 5px 5px;
+    color:white;
+}
+/* ----------------------------Blog Page Content-------------------- */
+.comment-box{
+    border: 2px #f0f0f0 solid;
+    border-radius: 5px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.comment-box h3{
+    text-align: left;
+    padding: 1rem;
+}
+.comment-form{
+    padding: 1rem;
+}
+.inputs{
+    width: 100%;
+    outline: none;
+    background: #f0f0f0;
+    border: none;
+    padding: .5rem .1rem .5rem .5rem;
+    margin-bottom: .8rem;
+    border-radius: 3px;
+}
+.form-submit-button{
+    display:inline-block;
+    text-decoration: none;
+    color: tomato;
+    padding: .5rem 2.6rem;
+    margin: 1rem;
+    border: 1px solid tomato;
+    position: relative;
+    transition: 1s;
+    background-color: transparent;
+}
+.form-submit-button:hover{
+    background: tomato;
+    border: 1px solid tomato;
+    color: white;
+}
+@media(max-width:760px){
+    #BlogPage-Main-Heading{
+        font-size: 35px
+    }    
+}
+/* -------------------Contact Us---------------------- */
+.location{
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+}
+iframe{
+    width: 100%;
+}
+.contect-Us{
+    width: 80%;
+    margin: auto;
+}
+.contect-Us .contect-col{
+   display: flex;
+   flex-basis: 48%;
+}
+.contect-Us div {
+    margin-bottom: 2rem;
+    
+}
+.div-internal{
+    display: flex;
+}
+.contect-Us i{
+   font-size: 24px;
+   color: tomato;
+   padding-right: 1rem;
+}
+.contect-Us h5{
+    color: #555;
+    font-size: 20px;
+    font-weight: 400;
+}
+.contect-Us p{
+    color: #555;
+}
+
+.contact-col input, .contact-col textarea{
+    width: 90%;
+    padding: .7rem;
+    margin: .7rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    outline: none;
+    border: 2px solid #c2bfbf;
+    /* box-sizing: border-box; */
+}
+.ContactSubmitButton{
+    display:inline-block;
+    text-decoration: none;
+    color: tomato;
+    padding: .5rem 2.6rem;
+    margin: 1rem;
+    border: 1px solid tomato;
+    position: relative;
+    transition: 1s;
+    background-color: transparent;
+}
+.ContactSubmitButton:hover{
+    background: tomato;
+    border: 1px solid tomato;
+    color: white;
+}
+
